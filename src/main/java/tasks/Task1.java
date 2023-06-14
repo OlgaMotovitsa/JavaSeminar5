@@ -21,6 +21,10 @@ import java.util.Map;
 public class Task1 {
     static Map<Integer, String> passportToName = new HashMap<>();
 
+    public static void main(String[] args) {
+        run();
+    }
+
     public static void run() {
         passportToName.put(123456, "Иванов");
         passportToName.put(321456, "Васильев");
@@ -30,6 +34,12 @@ public class Task1 {
         passportToName.put(345678, "Иванов");
 
         System.out.println(passportToName);
+
+        for (Map.Entry<Integer,String> entry: passportToName.entrySet()){
+            if (entry.getValue().equals("Иванов")) {
+                System.out.println(entry);
+            }
+        }
 
     }
 }
